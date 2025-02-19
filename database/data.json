@@ -1,0 +1,33 @@
+{
+    "events": [
+      {
+        "id": 1,
+        "title": "Free GI Cancer Screening Camp",
+        "date": "2024-05-12",
+        "location": "Mumbai, India",
+        "description": "Providing free cancer screening to underprivileged patients."
+      },
+      {
+        "id": 2,
+        "title": "Health & Wellness Seminar",
+        "date": "2024-06-15",
+        "location": "Delhi, India",
+        "description": "Educational seminar on mental health and wellness."
+      }
+    ],
+    "donors": [
+      {
+        "id": 1,
+        "name": "Anonymous",
+        "amount": 5000,
+        "date": "2024-04-22"
+      },
+      {
+        "id": 2,
+        "name": "John Doe",
+        "amount": 10000,
+        "date": "2024-04-23"
+      }
+    ]
+  }
+  

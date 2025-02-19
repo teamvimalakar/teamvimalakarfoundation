@@ -1,0 +1,55 @@
+/* Responsive Styles */
+
+/* Small devices (phones, 576px and below) */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-section img {
+        width: 100%;
+        height: auto;
+    }
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Medium devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large devices (desktops, 992px and below) */
+@media (max-width: 992px) {
+    .grid-cols-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .sidebar {
+        display: none;
+    }
+}
+
+/* Extra large devices (1200px and below) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+    }
+}

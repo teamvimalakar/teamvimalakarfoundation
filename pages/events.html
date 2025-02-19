@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Campaigns | Team Vimalakar Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/firebase.js"></script>
+    <script src="../assets/js/chatbot.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/gsap.js"></script>
+
+
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header -->
+    <header class="bg-yellow-500 text-black p-5 text-center text-2xl font-bold">
+        Events & Campaigns
+    </header>
+    <div id="header"></div>
+    <script>
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <!-- Events Section -->
+    <section class="max-w-6xl mx-auto py-10 px-5">
+        <h2 class="text-3xl font-bold text-center mb-6">Upcoming & Past Events</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white shadow-md rounded-lg p-5">
+                <h3 class="text-xl font-semibold">Upcoming Event: Free GI Cancer Screening Camp</h3>
+                <p class="text-gray-700 mt-2">Join us for a free medical screening camp aimed at detecting early signs
+                    of GI cancer.</p>
+                <p class="text-sm text-gray-500 mt-2"><i class="fa-solid fa-calendar"></i> Date: March 15, 2024</p>
+                <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot"></i> Location: Hyderabad, Telangana
+                </p>
+                <button class="mt-4 bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-600">Register</button>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-5">
+                <h3 class="text-xl font-semibold">Past Event: Women Empowerment Workshop</h3>
+                <p class="text-gray-700 mt-2">An insightful workshop focused on empowering women with skills and
+                    knowledge for self-sufficiency.</p>
+                <p class="text-sm text-gray-500 mt-2"><i class="fa-solid fa-calendar"></i> Date: Jan 10, 2024</p>
+                <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot"></i> Location: Hyderabad, Telangana
+                </p>
+                <button class="mt-4 bg-gray-500 text-white px-4 py-2 rounded cursor-not-allowed">Completed</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center p-4 mt-10">
+        <p>© 2024 Team Vimalakar Foundation | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Vimalakar Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/firebase.js"></script>
+    <script src="../assets/js/chatbot.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script>
+
+
+        // Load the header.html
+        fetch("../components/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+
+                // Remove menu items if on index.html
+                if (window.location.pathname.includes("index.html")) {
+                    document.querySelector("#header-placeholder nav").remove(); // Removes desktop menu
+                    document.querySelector("#header-placeholder #menu-toggle").remove(); // Removes mobile menu button
+                    document.querySelector("#header-placeholder #mobile-menu").remove(); // Removes mobile menu overlay
+                }
+            })
+            .catch(error => console.error("Error loading header:", error));
+
+        // Load the footer.html
+        fetch("../components/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading footer:", error));
+
+    </script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-black">
+
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center"
+        style="background-image: url('../assets/img/tvf_title.png');">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-bold mb-4" data-aos="fade-down">Transforming Lives, One Step at a Time</h1>
+            <p class="text-xl mb-6" data-aos="fade-up">Join us in making a difference in Education, Empowerment, and
+                Healthcare.</p>
+            <a href="#donate" class="bg-tvf text-black py-3 px-6 rounded-full font-semibold text-lg hover:bg-tvf">Donate
+                Now</a>
+        </div>
+    </section>
+
+    <!-- <button onclick="firebaseAuth.googleLogin()">Login with Google</button>
+    <button onclick="firebaseAuth.logout()">Logout</button>
+    <button onclick="firebaseDB.addDocument('donations', { name: 'John Doe', amount: 100 })">Add Donation</button>
+    <button onclick="firebaseDB.getDocuments('donations')">Get Donations</button> -->
+
+
+
+    <!-- Chatbot Floating Button -->
+    <button id="chatbot-icon" class="fixed bottom-5 right-5 bg-blue-500 p-4 rounded-full shadow-lg">
+        <i class="fas fa-comments text-white text-xl"></i>
+    </button>
+
+    <!-- Chatbot Box -->
+    <div id="chatbot-box" class="hidden fixed bottom-20 right-5 bg-white w-80 shadow-lg rounded-lg">
+        <div class="bg-blue-500 text-white p-3 font-semibold">Chat with Us!</div>
+        <div id="chatbot-body" class="p-3 h-64 overflow-y-auto space-y-2"></div>
+        <div class="p-3 flex">
+            <input id="chatbot-input" type="text" class="flex-1 p-2 border rounded-l-md"
+                placeholder="Type a message...">
+            <button id="chatbot-send" class="bg-blue-500 p-2 rounded-r-md">
+                <i class="fas fa-paper-plane text-white"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <div id="footer-placeholder"></div>
+
+
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

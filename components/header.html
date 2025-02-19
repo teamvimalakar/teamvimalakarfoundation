@@ -1,0 +1,43 @@
+<!-- Header Component -->
+<header class="bg-tvf text-black py-4 shadow-md fixed top-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center px-6">
+        <!-- Logo -->
+        <a href="../pages/index.html" class="flex items-center space-x-2">
+            <img src="../assets/img/logo.png" alt="TVF Logo" class="h-20 w-auto">
+            <img src="../assets/img/tvf_title.png" alt="TVF Title" class="h-auto w-96">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="md:flex space-x-6">
+            <a href="../pages/index.html" class="hover:text-gray-700">Home</a>
+            <a href="../pages/about.html" class="hover:text-gray-700">About</a>
+            <div class="relative group">
+                <button class="hover:text-gray-700">Programs</button>
+                <div class="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg hidden group-hover:block">
+                    <a href="../pages/services.html" class="block px-4 py-2 hover:bg-gray-200">Services</a>
+                    <a href="../pages/events.html" class="block px-4 py-2 hover:bg-gray-200">Events</a>
+                    <a href="../pages/volunteer.html" class="block px-4 py-2 hover:bg-gray-200">Volunteer</a>
+                </div>
+            </div>
+            <a href="../pages/contact.html" class="hover:text-gray-700">Contact</a>
+        </nav>
+        
+        <!-- Call-to-Action Button -->
+        <a href="../pages/donate.html" class="hidden md:block bg-black text-yellow-500 px-4 py-2 rounded-lg font-semibold hover:bg-gray-800">Donate</a>
+        
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="md:hidden text-2xl">&#9776;</button>
+    </div>
+    
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-80 text-white flex flex-col items-center justify-center space-y-6 hidden">
+        <button id="menu-close" class="absolute top-5 right-5 text-3xl">&times;</button>
+        <a href="../pages/index.html" class="text-2xl hover:text-yellow-400">Home</a>
+        <a href="../pages/about.html" class="text-2xl hover:text-yellow-400">About</a>
+        <a href="../pages/services.html" class="text-2xl hover:text-yellow-400">Services</a>
+        <a href="../pages/events.html" class="text-2xl hover:text-yellow-400">Events</a>
+        <a href="../pages/volunteer.html" class="text-2xl hover:text-yellow-400">Volunteer</a>
+        <a href="../pages/contact.html" class="text-2xl hover:text-yellow-400">Contact</a>
+        <a href="../pages/donate.html" class="bg-tvf text-black px-6 py-3 rounded-lg text-xl font-semibold">Donate</a>
+    </div>
+</header>

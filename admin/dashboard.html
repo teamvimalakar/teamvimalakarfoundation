@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | TVF</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script defer src="/admin/firebase.js"></script>
+    <script defer src="/admin/script.js"></script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-black text-white p-5">
+            <h2 class="text-xl font-bold mb-4">Admin Panel</h2>
+            <ul>
+                <li class="mb-3"><a href="#" class="hover:text-yellow-500"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li class="mb-3"><a href="#" class="hover:text-yellow-500"><i class="fas fa-users"></i> Users</a></li>
+                <li class="mb-3"><a href="#" class="hover:text-yellow-500"><i class="fas fa-hand-holding-heart"></i>
+                        Donations</a></li>
+                <li class="mb-3"><a href="#" class="hover:text-yellow-500"><i class="fas fa-calendar-alt"></i>
+                        Events</a></li>
+                <li><a href="#" class="hover:text-yellow-500"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="flex-1 p-6">
+            <h1 class="text-2xl font-bold text-gray-700">Welcome, Admin</h1>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-3 gap-6 mt-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold">Total Camps</h3>
+                    <p class="text-3xl font-bold text-yellow-500">13+</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold">Beneficiaries</h3>
+                    <p class="text-3xl font-bold text-yellow-500">5000+</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold">Active Volunteers</h3>
+                    <p class="text-3xl font-bold text-yellow-500">100+</p>
+                </div>
+            </div>
+
+            <!-- Recent Activity Table -->
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold mb-4">Recent Activities</h2>
+                <table class="min-w-full bg-white shadow-md rounded-lg">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="py-2 px-4">User</th>
+                            <th class="py-2 px-4">Action</th>
+                            <th class="py-2 px-4">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recent-activity"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Fetch recent activity from Firebase
+            const activityTable = document.getElementById("recent-activity");
+            fetchRecentActivity(activityTable);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - TVF</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/firebase.js"></script>
+    <script src="../assets/js/chatbot.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/gsap.js"></script>
+
+
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-yellow-500 p-4 text-center text-black font-bold text-xl">
+        Get Involved with Team Vimalakar Foundation
+    </header>
+    <div id="header"></div>
+    <script>
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <section class="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4">Corporate Partnerships & Sponsorships</h2>
+        <p class="mb-4">Join hands with us to create a meaningful impact. Our corporate partnerships help us fund and
+            expand our initiatives.</p>
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded">Learn More</button>
+    </section>
+
+    <section class="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4">Fundraising & Community Engagement</h2>
+        <p class="mb-4">Organize fundraising events or campaigns to support our programs. Every contribution makes a
+            difference.</p>
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded">Get Started</button>
+    </section>
+
+    <section class="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4">Host an Event or Awareness Campaign</h2>
+        <p class="mb-4">Spread awareness about our cause by hosting an event or an awareness drive in your community.
+        </p>
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded">Sign Up</button>
+    </section>
+
+    <footer class="bg-gray-800 text-white text-center p-4 mt-8">
+        <p>&copy; 2024 Team Vimalakar Foundation. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

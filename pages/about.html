@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Team Vimalakar Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/firebase.js"></script>
+    <script src="../assets/js/chatbot.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/gsap.js"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-yellow-400 text-black p-5 text-center text-2xl font-bold">About Us</header>
+    <div id="header"></div>
+    <script>
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <!-- Who We Are -->
+    <section class="container mx-auto p-6">
+        <h2 class="text-3xl font-semibold text-center" data-aos="fade-up">Who We Are</h2>
+        <p class="text-center text-gray-600 mt-4" data-aos="fade-up">Team Vimalakar Foundation is dedicated to providing
+            healthcare, education, and empowerment to underprivileged communities.</p>
+    </section>
+
+    <!-- Our Journey Timeline -->
+    <section class="container mx-auto p-6">
+        <h2 class="text-3xl font-semibold text-center" data-aos="fade-up">Our Journey</h2>
+        <div class="mt-8 space-y-6">
+            <div class="bg-white shadow-lg p-5 rounded-lg" data-aos="fade-right">
+                <h3 class="text-xl font-semibold">2015 - Foundation Established</h3>
+                <p>Our journey began with a vision to serve the community.</p>
+            </div>
+            <div class="bg-white shadow-lg p-5 rounded-lg" data-aos="fade-left">
+                <h3 class="text-xl font-semibold">2020 - 10,000+ Beneficiaries</h3>
+                <p>We reached a major milestone in providing healthcare and education.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="container mx-auto p-6">
+        <h2 class="text-3xl font-semibold text-center" data-aos="fade-up">Leadership Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="text-center" data-aos="zoom-in">
+                <img src="founder.jpg" alt="Founder" class="mx-auto rounded-full w-32 h-32">
+                <h3 class="text-xl font-semibold mt-3">Dr. ABC</h3>
+                <p class="text-gray-600">Founder & CEO</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor-Led Initiatives -->
+    <section class="container mx-auto p-6">
+        <h2 class="text-3xl font-semibold text-center" data-aos="fade-up">Doctor-Led Initiatives</h2>
+        <p class="text-center text-gray-600 mt-4" data-aos="fade-up">Our medical team is committed to innovative health
+            programs.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center p-5 mt-10">
+        <p>&copy; 2024 Team Vimalakar Foundation | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

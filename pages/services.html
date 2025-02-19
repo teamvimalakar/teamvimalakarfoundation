@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - TVF</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/firebase.js"></script>
+    <script src="../assets/js/chatbot.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/gsap.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-yellow-500 text-black py-4 text-center text-2xl font-bold">Our Services</header>
+    <div id="header"></div>
+    <script>
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <section class="container mx-auto p-6">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Education Section -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4 text-yellow-500">Education</h2>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Scholarships for underprivileged students</li>
+                    <li>Skill Development (Vocational Training, Digital Literacy)</li>
+                    <li>E-Learning & Remote Learning initiatives</li>
+                </ul>
+            </div>
+
+            <!-- Empowerment Section -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4 text-yellow-500">Empowerment</h2>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Women & Youth Empowerment Programs</li>
+                    <li>Livelihood Support (Small Business Grants, Mentorship)</li>
+                    <li>Community Awareness Campaigns</li>
+                </ul>
+            </div>
+
+            <!-- Healthcare Section -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4 text-yellow-500">Healthcare</h2>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>13+ Free GI Cancer Screening Camps</li>
+                    <li>Medical Checkups & Awareness Campaigns</li>
+                    <li>Mental Health & Well-being Programs</li>
+                    <li>Emergency & Disaster Response Initiatives</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white text-center py-4 mt-10">
+        <p>&copy; 2024 Team Vimalakar Foundation | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

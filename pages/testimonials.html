@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials & Stories | Vimalakar Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/firebase.js"></script>
+    <script src="../assets/js/chatbot.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/gsap.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <header class="bg-yellow-400 py-6 text-center text-black text-3xl font-bold">
+        Testimonials & Stories
+    </header>
+    <div id="header"></div>
+    <script>
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <section class="max-w-6xl mx-auto py-12 px-6">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">First-Hand Beneficiary Stories</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="italic">"Thanks to the free GI cancer screening camp, my condition was detected early and
+                    treated on time. Eternally grateful!"</p>
+                <p class="text-right font-bold mt-4">- Ramesh K.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="italic">"The Vimalakar Foundation helped my family during tough times. Their medical
+                    assistance changed our lives forever."</p>
+                <p class="text-right font-bold mt-4">- Anita P.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-6">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Volunteer & Donor Experiences</h2>
+        <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <p class="italic">"Volunteering here has been one of the most rewarding experiences of my life. Seeing
+                    lives change is priceless!"</p>
+                <p class="text-right font-bold mt-4">- Priya S.</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <p class="italic">"Being a donor, I always wanted to see where my funds go. The transparency and impact
+                    reports are truly commendable."</p>
+                <p class="text-right font-bold mt-4">- Rohit M.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto py-12 px-6">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Video Testimonials</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/3JZ_D3ELwOQ"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white text-center py-6 mt-12">
+        <p>© 2025 Vimalakar Foundation | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>

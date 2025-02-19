@@ -1,0 +1,72 @@
+/* Animations.css - Smooth transitions, hover effects, and scroll animations */
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Slide-in from left */
+  @keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  .slide-in-left {
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  /* Slide-in from right */
+  @keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  .slide-in-right {
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  /* Bounce animation */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .bounce {
+    animation: bounce 1s infinite;
+  }
+  
+  /* Scale-up on hover */
+  .scale-hover:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Rotate animation */
+  @keyframes rotate360 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .rotate {
+    animation: rotate360 2s linear infinite;
+  }
+  
+  /* Glow effect */
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px #FFD101; }
+    50% { box-shadow: 0 0 20px #FFD101; }
+    100% { box-shadow: 0 0 5px #FFD101; }
+  }
+  .glow-effect {
+    animation: glow 2s infinite alternate;
+  }
+  
+  /* Button hover effect */
+  .button-hover {
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .button-hover:hover {
+    background-color: #FFD101;
+    transform: translateY(-3px);
+  }
+  

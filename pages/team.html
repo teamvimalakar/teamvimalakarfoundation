@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Vimalakar Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/firebase.js"></script>
+    <script src="../assets/js/chatbot.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/gsap.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-black text-white text-center py-6">
+        <h1 class="text-3xl font-bold">Our Team</h1>
+        <p class="text-lg">Meet the dedicated individuals behind the Vimalakar Foundation</p>
+    </header>
+    <div id="header"></div>
+    <script>
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <section class="py-10 px-6">
+        <h2 class="text-center text-2xl font-semibold mb-6">Leadership Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="leader1.jpg" alt="Leader 1" class="w-32 h-32 rounded-full mx-auto">
+                <h3 class="text-lg font-semibold mt-4">Dr. Rajesh Kumar</h3>
+                <p class="text-gray-600">Founder & Director</p>
+                <p class="mt-2 text-sm">Passionate about community healthcare, Dr. Rajesh has led over 13 free GI Cancer
+                    screening camps.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="leader2.jpg" alt="Leader 2" class="w-32 h-32 rounded-full mx-auto">
+                <h3 class="text-lg font-semibold mt-4">Anita Sharma</h3>
+                <p class="text-gray-600">Operations Head</p>
+                <p class="mt-2 text-sm">Oversees all logistics, ensuring smooth execution of programs and partnerships.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="leader3.jpg" alt="Leader 3" class="w-32 h-32 rounded-full mx-auto">
+                <h3 class="text-lg font-semibold mt-4">Dr. Sandeep Verma</h3>
+                <p class="text-gray-600">Chief Medical Advisor</p>
+                <p class="mt-2 text-sm">Leads our medical camps, ensuring high-quality screenings and consultations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-10 px-6">
+        <h2 class="text-center text-2xl font-semibold mb-6">Our Volunteers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
+                <p class="text-gray-800 italic">"Volunteering at Vimalakar has been life-changing! The impact we create
+                    is truly inspiring."</p>
+                <h4 class="mt-4 font-semibold">- Priya Mehta</h4>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
+                <p class="text-gray-800 italic">"Being part of the team has given me a deeper understanding of community
+                    needs."</p>
+                <h4 class="mt-4 font-semibold">- Rahul Singh</h4>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
+                <p class="text-gray-800 italic">"I've learned and grown so much while helping those in need."</p>
+                <h4 class="mt-4 font-semibold">- Sanya Kapoor</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white text-center py-6 mt-10">
+        <p>&copy; 2024 Vimalakar Foundation. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

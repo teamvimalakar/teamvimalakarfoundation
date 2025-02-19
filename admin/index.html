@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | TVF</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-center text-gray-700">Admin Login</h2>
+        <form id="login-form" class="mt-4">
+            <div class="mb-4">
+                <label class="block text-gray-600 text-sm">Email</label>
+                <input type="email" id="email"
+                    class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-600 text-sm">Password</label>
+                <input type="password" id="password"
+                    class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            </div>
+            <button type="submit"
+                class="w-full bg-yellow-400 text-white py-2 rounded-lg hover:bg-yellow-500">Login</button>
+        </form>
+        <div class="text-center mt-4">
+            <button id="google-login"
+                class="bg-red-500 text-white py-2 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-red-600 w-full">
+                <i class="fab fa-google"></i> Login with Google
+            </button>
+        </div>
+        <p id="error-message" class="text-red-500 text-sm mt-2 text-center hidden"></p>
+    </div>
+
+    <script src="firebase.js"></script>
+    <script src="auth.js"></script>
+</body>
+
+</html>

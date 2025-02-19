@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports & Impact - Team Vimalakar Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/firebase.js"></script>
+    <script src="../assets/js/chatbot.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/gsap.js"></script>
+    
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <header class="bg-yellow-500 p-5 text-center text-black text-2xl font-bold">
+        Reports & Impact
+    </header>
+    <div id="header"></div>
+    <script>
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <section class="max-w-6xl mx-auto p-6">
+        <h2 class="text-xl font-bold text-gray-800">Downloadable Reports</h2>
+        <ul class="mt-4 space-y-2">
+            <li><a href="#" class="text-blue-600 hover:underline"><i class="fas fa-file-pdf"></i> Annual Report 2023</a>
+            </li>
+            <li><a href="#" class="text-blue-600 hover:underline"><i class="fas fa-file-pdf"></i> Financial Report
+                    2023</a></li>
+            <li><a href="#" class="text-blue-600 hover:underline"><i class="fas fa-file-pdf"></i> Impact Report 2023</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="max-w-6xl mx-auto p-6">
+        <h2 class="text-xl font-bold text-gray-800">Impact Metrics</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+            <div class="bg-white p-5 shadow rounded text-center">
+                <h3 class="text-lg font-semibold">13+</h3>
+                <p class="text-gray-600">GI Cancer Screening Camps</p>
+            </div>
+            <div class="bg-white p-5 shadow rounded text-center">
+                <h3 class="text-lg font-semibold">5000+</h3>
+                <p class="text-gray-600">Beneficiaries Served</p>
+            </div>
+            <div class="bg-white p-5 shadow rounded text-center">
+                <h3 class="text-lg font-semibold">200+</h3>
+                <p class="text-gray-600">Volunteers Engaged</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto p-6">
+        <h2 class="text-xl font-bold text-gray-800">Success Stories</h2>
+        <div class="bg-white p-5 shadow rounded mt-4">
+            <p class="italic">"Thanks to the Team Vimalakar Foundation, I received early diagnosis and treatment for GI
+                cancer. I am forever grateful!"</p>
+            <p class="mt-2 font-bold">- Rajesh Kumar, Beneficiary</p>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white p-5 text-center mt-6">
+        &copy; 2024 Team Vimalakar Foundation. All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>
