@@ -25,16 +25,37 @@
     <script>
 
 
+
         // Load the header.html
-        fetch("./components/header.html")
+        fetch("../components/header.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("header-placeholder").innerHTML = data;
+
+                // Ensure JavaScript runs after header is loaded
+                document.getElementById("menu-toggle").addEventListener("click", function () {
+                    document.getElementById("mobile-menu").classList.toggle("hidden");
+                });
+
+                document.getElementById("menu-close").addEventListener("click", function () {
+                    document.getElementById("mobile-menu").classList.add("hidden");
+                });
             })
             .catch(error => console.error("Error loading header:", error));
 
+
+
+
+        // // Load the header.html
+        // fetch("../components/header.html")
+        //     .then(response => response.text())
+        //     .then(data => {
+        //         document.getElementById("header-placeholder").innerHTML = data;
+        //     })
+        //     .catch(error => console.error("Error loading header:", error));
+
         // Load the footer.html
-        fetch("./components/footer.html")
+        fetch("../components/footer.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("footer-placeholder").innerHTML = data;
@@ -69,6 +90,10 @@
             width: auto;
             max-width: 100%;
         }
+
+        #mobile-menu {
+            display: none;
+        }
     </style>
 </head>
 
@@ -97,15 +122,15 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
             <div class="p-6 shadow-lg rounded-lg bg-gray-100">
                 <h3 class="text-2xl font-semibold">Camps Conducted</h3>
-                <p class="text-xl font-bold text-blue-600">25+</p>
+                <p class="text-xl font-bold text-blue-600">12</p>
             </div>
             <div class="p-6 shadow-lg rounded-lg bg-gray-100">
                 <h3 class="text-2xl font-semibold">Patients Served</h3>
-                <p class="text-xl font-bold text-green-600">10,000+</p>
+                <p class="text-xl font-bold text-green-600">4000+</p>
             </div>
             <div class="p-6 shadow-lg rounded-lg bg-gray-100">
                 <h3 class="text-2xl font-semibold">Volunteers Engaged</h3>
-                <p class="text-xl font-bold text-red-600">500+</p>
+                <p class="text-xl font-bold text-red-600">100+</p>
             </div>
         </div>
     </section>
@@ -133,11 +158,64 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section class="py-16 bg-white text-center" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-6">About Vimalakar Foundation</h2>
-        <p class="text-lg px-6 md:px-32">We are a non-profit organization dedicated to providing free healthcare,
-            education, and empowerment programs for underprivileged communities.</p>
+    <!-- About Team Vimalakar Foundation -->
+    <section class="py-16 bg-white text-center">
+        <h2 class="text-3xl font-bold mb-6">About Team Vimalakar Foundation</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center px-6 md:px-32">
+            <img src="./assets/img/vimalakar.jpg" alt="Dr. Vimalakar Reddy Eppa"
+                class="w-64 h-64 rounded-full mb-6 md:mb-0 md:mr-8">
+            <p class="text-lg">
+                Team Vimalakar Foundation is a <strong>non-profit organization</strong> committed to <strong>providing
+                    free healthcare, education, and empowerment programs</strong> to underprivileged communities across
+                India. Founded and led by <strong>Dr. Vimalakar Reddy Eppa</strong>, HOD & Sr. Consultant in GI Surgery
+                at <strong>KIMS-SUNSHINE Hospitals</strong>, the foundation is backed by a team of expert
+                <strong>gastroenterologists, surgeons, and healthcare professionals</strong> who strive to make a
+                lasting impact on the lives of those who lack access to essential medical services.
+            </p>
+        </div>
+    </section>
+
+    <!-- Labs and Medical Tests Offered -->
+    <section class="py-16 bg-gray-200 text-center">
+        <h2 class="text-3xl font-bold mb-6">Our Medical Screening Tests</h2>
+        <ul class="list-disc list-inside text-lg px-6 md:px-32">
+            <li>Endoscopy</li>
+            <li>Ultrasound</li>
+            <li>Proctoscopy</li>
+            <li>Complete Blood Picture (CBP)</li>
+            <li>Sr. Creatinine</li>
+            <li>Liver Function Test</li>
+            <li>Lipid Profile</li>
+            <li>Random Blood Sugar (RBS)</li>
+            <li>HCV, HBsAg Testing</li>
+            <li>ECG</li>
+            <li>2D Echo</li>
+            <li>Fibroscan</li>
+            <li>Specialist Consultations</li>
+        </ul>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-16 bg-gray-200 text-center">
+        <h2 class="text-3xl font-bold mb-6">Our Leadership Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 px-6">
+            <div class="p-6 shadow-lg rounded-lg bg-white">
+                <h3 class="text-2xl font-semibold">Dr. Vimalakar Reddy Eppa</h3>
+                <p class="text-lg">Founder & HOD, GI Surgery</p>
+            </div>
+            <div class="p-6 shadow-lg rounded-lg bg-white">
+                <h3 class="text-2xl font-semibold">Dr. Gourang</h3>
+                <p class="text-lg">Director</p>
+            </div>
+            <div class="p-6 shadow-lg rounded-lg bg-white">
+                <h3 class="text-2xl font-semibold">Dr. Jayanth</h3>
+                <p class="text-lg">CEO</p>
+            </div>
+            <div class="p-6 shadow-lg rounded-lg bg-white">
+                <h3 class="text-2xl font-semibold">Dr. Pavan</h3>
+                <p class="text-lg">COO</p>
+            </div>
+        </div>
     </section>
 
     <!-- Testimonials Section -->
@@ -244,12 +322,14 @@
         <h2 class="text-3xl font-bold mb-6">Watch Our Impact</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6">
             <div class="p-6 shadow-lg rounded-lg bg-gray-100">
-                <iframe class="w-full h-64 rounded-lg" src="https://www.youtube.com/embed/_eWBTTQQSLo?si=LKqbboGLAVa1eXrr" frameborder="0"
+                <iframe class="w-full h-64 rounded-lg"
+                    src="https://www.youtube.com/embed/_eWBTTQQSLo?si=LKqbboGLAVa1eXrr" frameborder="0"
                     allowfullscreen></iframe>
                 <h3 class="text-xl font-semibold mt-4">Camp Highlights</h3>
             </div>
             <div class="p-6 shadow-lg rounded-lg bg-gray-100">
-                <iframe class="w-full h-64 rounded-lg" src="https://www.youtube.com/embed/dhJDFJk1pwo?si=ONJACH_VP8UjEZNw" frameborder="0"
+                <iframe class="w-full h-64 rounded-lg"
+                    src="https://www.youtube.com/embed/dhJDFJk1pwo?si=ONJACH_VP8UjEZNw" frameborder="0"
                     allowfullscreen></iframe>
                 <h3 class="text-xl font-semibold mt-4">Camp Highlights</h3>
             </div>
@@ -271,10 +351,19 @@
     <script>
         AOS.init();
 
-        // Mobile menu toggle
         document.getElementById("menu-toggle").addEventListener("click", function () {
-            document.querySelector("nav").classList.toggle("hidden");
+            let menu = document.getElementById("mobile-menu");
+            menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "flex" : "none";
         });
+        document.getElementById("menu-close").addEventListener("click", function () {
+            document.getElementById("mobile-menu").style.display = "none";
+        });
+
+
+        // Mobile menu toggle
+        // document.getElementById("menu-toggle").addEventListener("click", function () {
+        //     document.querySelector("nav").classList.toggle("hidden");
+        // });
 
         // Swiper Carousel
         new Swiper('.swiper-container', {
