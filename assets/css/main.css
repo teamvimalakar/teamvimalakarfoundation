@@ -10,6 +10,27 @@
     --font-secondary: 'Open Sans', sans-serif;
 }
 
+.swiper-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: auto;
+    max-width: 100%;
+}
+
+#mobile-menu {
+    display: none;
+}
+
 body {
     font-family: var(--font-primary);
     color: var(--text-color);
@@ -56,6 +77,9 @@ p {
 .bg-tvf {
     background-color: var(--primary-color);
 }
+.border-tvf {
+    border-color: var(--primary-color);
+}
 
 .btn:hover {
     background-color: #e0b900;
@@ -92,6 +116,35 @@ p {
     color: #e0b900;
 }
 
+.menu-item {
+    z-index: 1050;
+}
+
+.submenu-group:hover>.submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+
+.image-transition {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.image-transition.loaded {
+    opacity: 1;
+}
+
+.hover-scale {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+
 /* Footer */
 .footer {
     background: var(--secondary-color);
@@ -111,10 +164,6 @@ p {
 
 .text-center {
     text-align: center;
-}
-
-.hidden {
-    display: none;
 }
 
 @font-face {
@@ -142,20 +191,6 @@ p {
     font-style: normal;
 }
 
-/* Example Usage */
-body {
-    font-family: 'OpenSans', sans-serif;
-}
-
-h1,
-h2,
-h3 {
-    font-family: 'Roboto', sans-serif;
-}
-
-strong {
-    font-family: 'OpenSans-Bold', sans-serif;
-}
 
 
 /* Responsive Design */
