@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Vimalakar Foundation</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link
@@ -32,14 +33,14 @@
             .then(data => {
                 document.getElementById("header-placeholder").innerHTML = data;
 
-                // Ensure JavaScript runs after header is loaded
-                document.getElementById("menu-toggle").addEventListener("click", function () {
-                    document.getElementById("mobile-menu").classList.toggle("hidden");
-                });
+                // // Ensure JavaScript runs after header is loaded
+                // document.getElementById("menu-toggle").addEventListener("click", function () {
+                //     document.getElementById("mobile-menu").classList.toggle("hidden");
+                // });
 
-                document.getElementById("menu-close").addEventListener("click", function () {
-                    document.getElementById("mobile-menu").classList.add("hidden");
-                });
+                // document.getElementById("menu-close").addEventListener("click", function () {
+                //     document.getElementById("mobile-menu").classList.add("hidden");
+                // });
             })
             .catch(error => console.error("Error loading header:", error));
 
@@ -53,38 +54,6 @@
             .catch(error => console.error("Error loading footer:", error));
 
     </script>
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .swiper-container {
-            width: 100%;
-            max-width: 100%;
-            overflow: hidden;
-        }
-
-        .swiper-wrapper {
-            display: flex;
-            width: 100%;
-        }
-
-        .swiper-slide {
-            flex-shrink: 0;
-            width: auto;
-            max-width: 100%;
-        }
-
-        #mobile-menu {
-            display: none;
-        }
-    </style>
 </head>
 
 <body class="bg-gray-100 text-black">
@@ -266,25 +235,6 @@
         </div>
     </section>
 
-
-    <!-- Chatbot Floating Button -->
-    <button id="chatbot-icon" class="fixed bottom-5 right-5 bg-blue-500 p-4 rounded-full shadow-lg">
-        <i class="fas fa-comments text-white text-xl"></i>
-    </button>
-
-    <!-- Chatbot Box -->
-    <div id="chatbot-box" class="hidden fixed bottom-20 right-5 bg-white w-80 shadow-lg rounded-lg">
-        <div class="bg-blue-500 text-white p-3 font-semibold">Chat with Us!</div>
-        <div id="chatbot-body" class="p-3 h-64 overflow-y-auto space-y-2"></div>
-        <div class="p-3 flex">
-            <input id="chatbot-input" type="text" class="flex-1 p-2 border rounded-l-md"
-                placeholder="Type a message...">
-            <button id="chatbot-send" class="bg-blue-500 p-2 rounded-r-md">
-                <i class="fas fa-paper-plane text-white"></i>
-            </button>
-        </div>
-    </div>
-
     <!-- Social Media Comments Section -->
     <section class="py-16 bg-gray-100 text-center" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-6">What People Say on Social Media</h2>
@@ -326,15 +276,34 @@
         </div>
     </section>
 
+
+    <!-- Chatbot Floating Button -->
+    <button id="chatbot-icon" class="fixed bottom-20 right-5 bg-tvf p-4 rounded-full shadow-lg">
+        <i class="fas fa-comments text-dark text-xl"></i>
+    </button>
+
+    <!-- Chatbot Box -->
+    <div id="chatbot-box" class="hidden fixed bottom-20 right-5 bg-white w-80 shadow-lg rounded-lg">
+        <div class="bg-tvf text-dark p-3 font-semibold">Chat with Us!</div>
+        <div id="chatbot-body" class="p-3 h-64 overflow-y-auto space-y-2"></div>
+        <div class="p-3 flex">
+            <input id="chatbot-input" type="text" class="flex-1 p-2 border rounded-l-md"
+                placeholder="Type a message...">
+            <button id="chatbot-send" class="bg-tvf p-2 rounded-r-md">
+                <i class="fas fa-paper-plane text-dark"></i>
+            </button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-5 right-5 bg-gray-800 text-white px-4 py-2 rounded-full hidden">
+    <button id="backToTop" class="fixed bottom-5 right-5 bg-tvf text-dark px-4 py-2 rounded-full hidden">
         ↑ Top
     </button>
-    <div id="footer-placeholder"></div>
+
 
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
