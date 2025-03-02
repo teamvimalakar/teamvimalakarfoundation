@@ -1,43 +1,144 @@
 <!-- Header Component -->
-<header class="bg-tvf text-black py-4 shadow-md top-0 w-full z-50">
+<header class="bg-tvf text-black py-2 shadow-md top-0 w-full z-50">
+
     <div class="container mx-auto flex justify-between items-center px-6">
+
+
+
         <!-- Logo -->
         <a href="./index.html" class="flex items-center space-x-2">
-            <img src="./assets/img/logo.png" alt="TVF Logo" class="h-20 w-auto">
-            <img src="./assets/img/tvf_title.png" alt="TVF Title" class="h-auto w-96">
+            <img src="../assets/img/logo.png" alt="TVF Logo" class="h-12 w-auto sm:h-16">
+            <img src="../assets/img/tvf_title.png" alt="TVF Title" class="h-auto w-40 sm:w-60 md:w-80 hidden sm:block">
         </a>
-        
-        <!-- Desktop Navigation -->
-        <nav class="md:flex space-x-6">
+
+        <!-- Desktop Navigation - Fixed: Make visible on desktop only (md+) -->
+        <nav class="hidden md:flex md:items-center md:space-x-6">
             <a href="./index.html" class="hover:text-gray-700">Home</a>
-            <a href="../pages/about.html" class="hover:text-gray-700">About</a>
+
+            <!-- About Us with Dropdown -->
             <div class="relative group">
-                <button class="hover:text-gray-700">Programs</button>
-                <div class="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg hidden group-hover:block">
-                    <a href="../pages/services.html" class="block px-4 py-2 hover:bg-gray-200">Services</a>
-                    <a href="../pages/events.html" class="block px-4 py-2 hover:bg-gray-200">Events</a>
-                    <a href="../pages/volunteer.html" class="block px-4 py-2 hover:bg-gray-200">Volunteer</a>
+
+                <button class="hover:text-gray-700 focus:outline-none flex items-center">
+                    About Us <span class="ml-1">▼</span>
+                </button>
+
+                <div
+                    class="menu-item absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:visible">
+
+                    <!-- Healthcare Dropdown -->
+                    <div class="relative submenu-group">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-200 flex justify-between">Who We Are →</a>
+                        <div
+                            class="submenu absolute right-full top-0 mt-0 w-56 bg-white text-black rounded-lg shadow-lg opacity-0 transition-all duration-300 submenu-group-hover:opacity-100 submenu-group-hover:visible">
+                            <a href="../pages/vimalakar.html" class="block px-4 py-2 hover:bg-gray-200">Vimalakar</a>
+                            <a href="../pages/team_vimalakar.html" class="block px-4 py-2 hover:bg-gray-200">Team Vimalakar</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Team Vimalakar Foundation</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Kunjara Yatra</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Our Mission</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Our Vision</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Our Board Members</a>
                 </div>
             </div>
-            <a href="../pages/contact.html" class="hover:text-gray-700">Contact</a>
+            <!-- Services with Dropdown -->
+            <div class="relative group">
+                <button class="hover:text-gray-700 focus:outline-none flex items-center">
+                    Services <span class="ml-1">▼</span>
+                </button>
+
+                <div
+                    class="menu-item absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:visible">
+
+                    <!-- Healthcare Dropdown -->
+                    <div class="relative submenu-group">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-200 flex justify-between">Healthcare →</a>
+                        <div
+                            class="submenu absolute left-full top-0 mt-0 w-56 bg-white text-black rounded-lg shadow-lg opacity-0 transition-all duration-300 submenu-group-hover:opacity-100 submenu-group-hover:visible">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">General Health</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Dental Care</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Mental Health</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Child Care</a>
+                        </div>
+                    </div>
+
+                    <!-- Education Dropdown -->
+                    <div class="relative submenu-group">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-200 flex justify-between">Education →</a>
+                        <div
+                            class="submenu absolute left-full top-0 mt-0 w-56 bg-white text-black rounded-lg shadow-lg opacity-0 transition-all duration-300 submenu-group-hover:opacity-100 submenu-group-hover:visible">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Primary Education</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Secondary Education</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Scholarships</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Skill Development</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Adult Education</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Digital Learning</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Empowerment</a>
+                </div>
+            </div>
+
+
+
+
+
+            <a href="./pages/impact.html" class="hover:text-gray-700">Impact</a>
         </nav>
-        
+
         <!-- Call-to-Action Button -->
-        <a href="../pages/donate.html" class="hidden md:block bg-black text-yellow-500 px-4 py-2 rounded-lg font-semibold hover:bg-gray-800">Donate</a>
-        
+        <a href="./pages/donate.html"
+            class="hidden md:block bg-black text-yellow-500 px-4 py-2 rounded-lg font-semibold hover:bg-gray-800">Donate</a>
+
         <!-- Mobile Menu Button -->
-        <button id="menu-toggle" class="md:hidden text-2xl">&#9776;</button>
+        <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
     </div>
-    
+
     <!-- Mobile Navigation Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-80 text-white flex flex-col items-center justify-center space-y-6 hidden">
-        <button id="menu-close" class="absolute top-5 right-5 text-3xl">&times;</button>
-        <a href="../pages/index.html" class="text-2xl hover:text-yellow-400">Home</a>
-        <a href="../pages/about.html" class="text-2xl hover:text-yellow-400">About</a>
-        <a href="../pages/services.html" class="text-2xl hover:text-yellow-400">Services</a>
-        <a href="../pages/events.html" class="text-2xl hover:text-yellow-400">Events</a>
-        <a href="../pages/volunteer.html" class="text-2xl hover:text-yellow-400">Volunteer</a>
-        <a href="../pages/contact.html" class="text-2xl hover:text-yellow-400">Contact</a>
-        <a href="../pages/donate.html" class="bg-tvf text-black px-6 py-3 rounded-lg text-xl font-semibold">Donate</a>
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-black bg-opacity-80 text-white flex-col items-center justify-center space-y-6 hidden z-50">
+        <div class="flex flex-col items-center justify-center h-full">
+            <button id="menu-close" class="absolute top-5 right-5 text-3xl">×</button>
+            <a href="./index.html" class="text-2xl hover:text-yellow-400 py-2">Home</a>
+            <a href="./pages/about.html" class="text-2xl hover:text-yellow-400 py-2">About</a>
+            <div class="flex flex-col items-center py-2">
+                <span class="text-2xl hover:text-yellow-400 mb-2">Programs</span>
+                <div class="flex flex-col items-center space-y-2 mb-4 bg-gray-800 bg-opacity-50 p-3 rounded-lg">
+                    <a href="./pages/services.html" class="text-xl hover:text-yellow-400">Services</a>
+                    <a href="./pages/events.html" class="text-xl hover:text-yellow-400">Events</a>
+                    <a href="./pages/volunteer.html" class="text-xl hover:text-yellow-400">Volunteer</a>
+                </div>
+            </div>
+            <a href="./pages/contact.html" class="text-2xl hover:text-yellow-400 py-2">Contact</a>
+            <a href="./pages/donate.html"
+                class="bg-tvf text-black px-6 py-3 rounded-lg text-xl font-semibold mt-2">Donate</a>
+        </div>
     </div>
 </header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuToggle && menuClose && mobileMenu) {
+            menuToggle.addEventListener('click', function () {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            });
+
+            menuClose.addEventListener('click', function () {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        }
+
+
+
+    });
+</script>
