@@ -59,6 +59,7 @@ p {
     color: var(--text-color);
 }
 
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -77,8 +78,25 @@ p {
 .bg-tvf {
     background-color: var(--primary-color);
 }
+.text-tvf {
+    color: var(--primary-color);
+}
+
 .border-tvf {
     border-color: var(--primary-color);
+}
+
+.camp-card {
+    transition: transform 0.3s ease;
+}
+
+.camp-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-counter {
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 .btn:hover {
@@ -144,6 +162,14 @@ p {
     transform: scale(1.05);
 }
 
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-1200px); }
+}
+
+.banner-animate-scroll {
+    animation: scroll 15s linear infinite;
+}
 
 /* Footer */
 .footer {

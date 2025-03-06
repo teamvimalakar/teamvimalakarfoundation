@@ -47,6 +47,7 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById("footer-placeholder").innerHTML = data;
+                document.getElementById("copyrightyear").textContent = new Date().getFullYear();
             })
             .catch(error => console.error("Error loading footer:", error));
 
@@ -61,11 +62,17 @@
     <!-- Header Section -->
     <section class="container mx-auto p-6 text-center" data-aos="fade-up">
         <img src="../assets/img/vimalakar.jpg" alt="Dr. Eppa Vimalakar Reddy"
-            class="mx-auto rounded-full w-60 h-60 shadow-lg image-transition">
+            class="mx-auto rounded-full w-80 h-80 shadow-lg image-transition object-cover">
         <h2 class="text-3xl font-semibold mt-4">Dr. Eppa Vimalakar Reddy</h2>
         <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
             A leading expert in surgical gastroenterology, specializing in minimally invasive procedures and advanced
             gastrointestinal surgeries.
+        </p>
+        <p class="text-gray-600 font-bold mt-2 max-w-2xl mx-auto">
+            MBBS, DNB (Gen. Surg.), DNB (Surg. Gastro.), FACS (USA)
+            Sr Consultant & HOD, Department of Surgical Gastroenterology, Hepato-Pancreatico-biliary,
+            Colorectal, GI Oncology, Bariatrics, Advanced Laparoscopy & Liver Transplantation
+            KIMS-Sunshine Hospital.
         </p>
         <a href="https://surgicalgastroenterologists.com/dr-vimalakar-reddy.html"
             class="mt-4 inline-block bg-tvf text-dark px-6 py-2 rounded-lg hover:bg-tvf transition-colors">
@@ -74,50 +81,102 @@
     </section>
 
     <!-- Professional Journey Section -->
-    <section class="container mx-auto p-6">
-        <h2 class="text-3xl font-semibold text-center" data-aos="fade-up">Professional Journey</h2>
+    <section class="container mx-auto p-6 max-w-5xl">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-6" data-aos="fade-up">Professional Journey</h2>
         <div class="mt-8 space-y-6">
-            <div class="bg-white shadow-lg p-5 rounded-lg hover-scale" data-aos="fade-right">
-                <h3 class="text-xl font-semibold">Medical Expertise</h3>
-                <p class="mt-2 text-gray-700">
-                    Dr. Vimalakar Reddy Eppa is renowned for his expertise in advanced GI procedures, including laparoscopic and
-                    robotic surgeries. His focus on minimally invasive techniques ensures faster recovery and better
-                    outcomes for patients.
+            <div class="bg-white shadow-2xl p-8 rounded-2xl transition-transform transform hover:scale-105 duration-300"
+                data-aos="fade-right">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    <span class="font-semibold text-blue-600">I was raised</span> in a lower-middle-class family with an
+                    agricultural background in a small village of Vadyal, Adilabad district, Telangana, India. As the
+                    first in my family to receive an education, I completed my schooling at a Government school in
+                    Vadyal. My keen interest in the medical field led to a high score in <span
+                        class="text-green-600 font-medium">EAMCET</span>, allowing me to graduate from the esteemed
+                    <span class="font-semibold text-gray-800">Gandhi Medical College</span>, Hyderabad, India.
                 </p>
-            </div>
-            <div class="bg-white shadow-lg p-5 rounded-lg hover-scale" data-aos="fade-left">
-                <h3 class="text-xl font-semibold">Research & Contributions</h3>
-                <p class="mt-2 text-gray-700">
-                    Dr. Vimalakar Reddy has published numerous research papers in reputed medical journals and has been a pioneer
-                    in introducing innovative techniques in gastrointestinal surgery. His contributions have
-                    significantly impacted the field.
+                <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+                    My passion for <span class="text-indigo-600 font-medium">surgery</span> and dedication to the
+                    medical profession led me to pursue a <span class="font-semibold text-gray-800">DNB in General
+                        Surgery</span> at Kamineni Hospital, where I developed a special interest in the <span
+                        class="italic">Hepatobiliary system</span>. My dream of specializing in <span
+                        class="text-red-600 font-medium">surgical gastroenterology</span> came true when I joined <span
+                        class="font-semibold">MMHRC, Madurai</span> for my DNB in Surgical Gastroenterology, where I was
+                    nurtured and trained to become the surgeon I am today.
                 </p>
-            </div>
-            <div class="bg-white shadow-lg p-5 rounded-lg hover-scale" data-aos="fade-right">
-                <h3 class="text-xl font-semibold">Awards & Recognitions</h3>
-                <p class="mt-2 text-gray-700">
-                    Dr. Vimalakar Reddy has been honored with several awards for his outstanding contributions to surgical
-                    gastroenterology. His dedication to patient care and surgical excellence has earned him a stellar
-                    reputation.
+                <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+                    As a <span class="font-semibold text-gray-900">young and enthusiastic surgeon</span>, I joined the
+                    <span class="text-blue-600 font-medium">Department of Surgical Gastroenterology</span> at <span
+                        class="font-semibold">Sunshine Hospital, Secunderabad</span>, where I played a key role in
+                    establishing a successful <span class="text-red-500 font-semibold">liver transplant program</span>.
+                    I also focused on training my team in <span class="text-indigo-600">minimally invasive bariatric
+                        surgeries</span>. I have always been driven by a deep sense of responsibility to serve the
+                    underprivileged, and this is reflected in my efforts to <span
+                        class="text-green-600 font-semibold">educate my patients</span> and use them as tools to spread
+                    awareness within their communities through <span class="italic">peer group meetings and social media
+                        outreach</span>.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+                    My passion for <span class="text-purple-600 font-semibold">teaching budding surgeons</span> has led
+                    me to organize numerous <span class="text-yellow-600">workshops</span> on intricate surgical
+                    procedures. I have published many articles and delivered lectures at <span
+                        class="font-semibold">national and international forums</span>, always striving to present
+                    complex concepts in a <span class="italic">simple and understandable way</span>. As the <span
+                        class="text-blue-600 font-semibold">chief reviewer</span> for both national and international
+                    journals, I am also a <span class="text-gray-800 font-semibold">primary investigator</span> for
+                    several ongoing studies. Additionally, I have authored chapters in <span
+                        class="text-indigo-600 font-semibold">surgical gastroenterology textbooks</span>.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+                    In addition to my medical career, I have a love for <span
+                        class="text-red-600 font-medium">poetry</span> and have composed many works in my mother tongue,
+                    Telugu. I later released a poetry book titled <span class="font-semibold text-gray-900">"Kavi Rayani
+                        Kavithalu"</span>. My contributions to medicine have been recognized with the prestigious <span
+                        class="text-green-600 font-semibold">“Vaidya Shree”</span> and <span
+                        class="text-green-600 font-semibold">“Best Doctor”</span> awards in 2020, and in 2021, I was
+                    honored with the title of <span class="font-semibold text-blue-600">Fellow of the American College
+                        of Surgeons (FACS)</span>.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+                    I am also the founder of <span class="font-semibold text-red-500">Kunjara Yatra</span>, an
+                    initiative aimed at raising awareness about the early detection of <span class="text-blue-600">GI
+                        cancers</span>, the importance of diet, and maintaining a <span
+                        class="text-green-600 font-semibold">healthy BMI</span>. As part of this program, we conduct a
+                    comprehensive range of screening tests, including <span class="italic">ultrasound, endoscopy,
+                        proctoscopy, Liver Function Tests (LFT), lipid profile, complete blood profile (CBP), serum
+                        creatinine, random blood sugar (RBS), ECG, and 2D-echo</span>. These tests help in the early
+                    identification of GI cancers and other related conditions, enabling timely intervention and
+                    treatment.
+                </p>
+                <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+                    Through this initiative, we also <span class="text-green-600 font-semibold">educate
+                        communities</span> on how lifestyle factors, such as diet and weight management, significantly
+                    impact the risk of developing GI cancers. Our goal is to <span
+                        class="text-indigo-600 font-semibold">empower individuals</span> to make informed decisions
+                    about their health, thereby reducing the prevalence and burden of GI cancers, particularly in
+                    underserved areas.
                 </p>
             </div>
         </div>
     </section>
+
 
     <!-- Gallery Section -->
     <section class="container mx-auto p-6">
         <h2 class="text-3xl font-semibold text-center" data-aos="fade-up">Gallery</h2>
         <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-white shadow-lg rounded-lg overflow-hidden hover-scale" data-aos="fade-up">
-                <img src="https://surgicalgastroenterologists.com/assets/images/about/vimalakar.jpg" alt="Image 1" class="w-full h-90 object-cover image-transition loaded border-4 border-tvf rounded-lg">
+                <img src="https://surgicalgastroenterologists.com/assets/images/about/vimalakar.jpg" alt="Image 1"
+                    class="w-full h-90 object-cover image-transition loaded border-4 border-tvf rounded-lg">
             </div>
             <div class="bg-white shadow-lg rounded-lg overflow-hidden hover-scale" data-aos="fade-up"
                 data-aos-delay="100">
-                <img src="https://surgicalgastroenterologists.com/assets/images/about/1.jpg" alt="Image 2" class="w-full h-90 object-cover image-transition loaded border-4 border-tvf rounded-lg">
+                <img src="https://surgicalgastroenterologists.com/assets/images/about/1.jpg" alt="Image 2"
+                    class="w-full h-90 object-cover image-transition loaded border-4 border-tvf rounded-lg">
             </div>
             <div class="bg-white shadow-lg rounded-lg overflow-hidden hover-scale" data-aos="fade-up"
                 data-aos-delay="200">
-                <img src="https://surgicalgastroenterologists.com/assets/images/about/2.jpg" alt="Image 3" class="w-full h-90 object-cover image-transition loaded border-4 border-tvf rounded-lg">
+                <img src="https://surgicalgastroenterologists.com/assets/images/about/2.jpg" alt="Image 3"
+                    class="w-full h-90 object-cover image-transition loaded border-4 border-tvf rounded-lg">
             </div>
         </div>
     </section>
@@ -154,6 +213,48 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         AOS.init();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 1000, // Animation duration
+                // once: true, // Only animate once
+            });
+
+            gsap.from("section", {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                stagger: 0.3, // Sections appear one by one
+                ease: "power3.out"
+            });
+
+            // gsap.from(".image-transition", {
+            //     opacity: 0,
+            //     scale: 0.8,
+            //     duration: 1,
+            //     ease: "power3.out",
+            //     delay: 0.5
+            // });
+
+            gsap.from("h2, p", {
+                opacity: 0,
+                y: 20,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power3.out",
+                delay: 0.5
+            });
+
+            gsap.from("a", {
+                opacity: 0,
+                scale: 0.8,
+                duration: 0.8,
+                ease: "power2.out",
+                delay: 1
+            });
+        });
+
+
 
         document.getElementById("menu-toggle").addEventListener("click", function () {
             let menu = document.getElementById("mobile-menu");

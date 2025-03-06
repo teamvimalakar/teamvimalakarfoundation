@@ -23,10 +23,25 @@
     <script src="./assets/js/firebase.js"></script>
     <script src="./assets/js/chatbot.js"></script>
     <script src="./assets/js/aos.js"></script>
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
     <script>
-
-
-
         // Load the header.html
         fetch("./components/header.html")
             .then(response => response.text())
@@ -50,6 +65,7 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById("footer-placeholder").innerHTML = data;
+                document.getElementById("copyrightyear").textContent = new Date().getFullYear();
             })
             .catch(error => console.error("Error loading footer:", error));
 
@@ -122,7 +138,7 @@
         <h2 class="text-3xl font-bold mb-6">About Team Vimalakar Foundation</h2>
         <div class="flex flex-col md:flex-row items-center justify-center px-6 md:px-32">
             <img src="./assets/img/vimalakar.jpg" alt="Dr. Vimalakar Reddy Eppa"
-                class="w-64 h-64 rounded-full mb-6 md:mb-0 md:mr-8">
+                class="w-64 h-64 rounded-full mb-6 md:mb-0 md:mr-8 object-cover">
             <p class="text-lg">
                 Team Vimalakar Foundation is a <strong>non-profit organization</strong> committed to <strong>providing
                     free healthcare, education, and empowerment programs</strong> to underprivileged communities across
@@ -132,6 +148,93 @@
                 lasting impact on the lives of those who lack access to essential medical services.
             </p>
         </div>
+    </section>
+
+    <!--     <section class="py-16 text-center bg-gradient-to-r from-gray-700 to-gray-900">
+        <h2 class="text-4xl font-bold mb-6 text-white animate-fadeIn">Our Medical Screening Tests</h2>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto text-lg">
+            <li class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                <img src="endoscopy.jpg" alt="Endoscopy" class="w-full h-40 object-cover">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p class="text-white font-semibold">Endoscopy</p>
+                </div>
+            </li>
+            <li class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                <img src="ultrasound.jpg" alt="Ultrasound" class="w-full h-40 object-cover">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p class="text-white font-semibold">Ultrasound</p>
+                </div>
+            </li>
+            <li class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                <img src="consultation.jpg" alt="Specialist Consultations" class="w-full h-40 object-cover">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p class="text-white font-semibold">Specialist Consultations</p>
+                </div>
+            </li>
+            <li class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                <img src="proctoscopy.jpg" alt="Proctoscopy" class="w-full h-40 object-cover">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p class="text-white font-semibold">Proctoscopy</p>
+                </div>
+            </li>
+            <li class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                <img src="cbp.jpg" alt="Complete Blood Picture (CBP)" class="w-full h-40 object-cover">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p class="text-white font-semibold">Complete Blood Picture (CBP)</p>
+                </div>
+            </li>
+            <li class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                <img src="serum.jpg" alt="Serum. Creatinine" class="w-full h-40 object-cover">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p class="text-white font-semibold">Serum Creatinine</p>
+                </div>
+            </li>
+            
+
+        </ul>
+    </section> -->
+
+    <!-- Medical Tests -->
+    <section class="py-16 text-center bg-gradient-to-r from-gray-700 to-gray-900">
+        <h2 class="text-4xl font-bold mb-6 text-white animate-fadeIn">Our Medical Screening Tests</h2>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto text-lg">
+            <li
+                class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105 bg-tvf p-6 flex flex-col items-center">
+                <i class="fas fa-microscope text-6xl text-black"></i>
+                <p class="text-gray-800 font-semibold mt-4">Endoscopy</p>
+            </li>
+            <li
+                class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105 bg-tvf p-6 flex flex-col items-center">
+                <i class="fas fa-wave-square text-6xl text-black"></i>
+                <p class="text-gray-800 font-semibold mt-4">Ultrasound</p>
+            </li>
+            <li
+                class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105 bg-tvf p-6 flex flex-col items-center">
+                <i class="fas fa-user-md text-6xl text-black"></i>
+                <p class="text-gray-800 font-semibold mt-4">Specialist Consultations</p>
+            </li>
+            <li
+                class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105 bg-tvf p-6 flex flex-col items-center">
+                <i class="fas fa-stethoscope text-6xl text-black"></i>
+                <p class="text-gray-800 font-semibold mt-4">Proctoscopy</p>
+            </li>
+            <li
+                class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105 bg-tvf p-6 flex flex-col items-center">
+                <i class="fas fa-vial text-6xl text-black"></i>
+                <p class="text-gray-800 font-semibold mt-4">Complete Blood Picture (CBP)</p>
+            </li>
+            <li
+                class="relative group overflow-hidden text-gray-500 rounded-lg shadow-md transition-transform transform hover:scale-105 bg-tvf p-6 flex flex-col items-center">
+                <i class="fas fa-flask text-6xl text-black"></i>
+                <p class="text-gray-800 font-semibold mt-4">Serum Creatinine</p>
+            </li>
+        </ul>
     </section>
 
     <!-- Labs and Medical Tests Offered -->
