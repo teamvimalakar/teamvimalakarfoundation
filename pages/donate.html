@@ -16,6 +16,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/animations.css">
@@ -103,17 +105,17 @@
 
     <!-- Hero Section -->
     <section class="py-6 text-center">
-        <h1 class="text-tvf text-4xl font-bold">Get Involved with Team Vimalakar Foundation</h1>
-        <p class="text-tvf text-lg mt-2">Join our mission to make a difference!</p>
-        <p class="text-center text-white mb-1" data-aos="fade-up">Become a part of Team Vimalakar Foundation and make
-            an impact in healthcare and education.</p>
+        <h1 class="text-tvf text-4xl font-bold">Support Our Cause</h1>
+        <p class="text-tvf text-lg mt-2">Make a Difference with Your Donation</p>
+        <p class="text-center text-white mb-1" data-aos="fade-up">Your contributions help us provide essential medical
+            aid and community support</p>
     </section>
 
     <!-- Form Section -->
     <section class="container mx-auto px-6 py-12">
         <div class="p-8 rounded-xl shadow-xl max-w-2xl mx-auto" data-aos="fade-up">
-            <h2 class="text-2xl font-bold text-center text-white mb-6">Volunteer Registration</h2>
-            <form id="volunteerForm" class="space-y-5">
+            <h2 class="text-2xl font-bold text-center text-white mb-6">Donate Now</h2>
+            <form id="donationForm" class="space-y-5">
                 <div class="relative">
                     <label class="block text-tvf font-semibold font-medium">Full Name</label>
                     <input type="text" id="name"
@@ -141,30 +143,18 @@
                     <p class="text-xs text-gray-500 mt-1">Enter a 10-digit phone number.</p>
                 </div>
 
-
                 <div class="relative">
-                    <label class="block text-tvf font-semibold font-medium">Designation</label>
-                    <select id="designation"
+                    <label class="block text-tvf font-semibold font-medium">Donation Amount (INR)</label>
+                    <input type="number" id="amount" minlength="3" min="100"
                         class="w-full p-3 border border-tvf rounded-lg focus:ring-2 focus:ring-yellow-400 transition duration-300 ease-in-out"
-                        required>
-                        <option value="" disabled selected>Select your role</option>
-                        <option value="Doctor">Doctor</option>
-                        <option value="Nurse">Nurse</option>
-                        <option value="Volunteer">Volunteer</option>
-                        <option value="Coordinator">Coordinator</option>
-                    </select>
+                        placeholder="Enter amount" required>
+                    <p class="text-xs text-gray-500 mt-1">Minimum donation: ₹100</p>
                 </div>
 
-                <div class="relative">
-                    <label class="block text-tvf font-semibold font-medium">Message</label>
-                    <textarea id="message"
-                        class="w-full p-3 border border-tvf rounded-lg focus:ring-2 focus:ring-yellow-400 transition duration-300 ease-in-out"
-                        rows="3" placeholder="Why do you want to join?" required></textarea>
-                </div>
 
-                <button type="submit" id="submitBtn"
+                <button type="submit" id="donateBtn"
                     class="w-full bg-tvf hover:bg-tvf text-black font-bold py-3 rounded-lg transition duration-300 flex items-center justify-center">
-                    <span id="btnText">Submit</span>
+                    <span id="btnText">Donate Now</span>
                     <svg id="loader" class="hidden w-5 h-5 ml-3 animate-spin text-white"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
@@ -356,24 +346,29 @@
 
 
 
-        document.getElementById("volunteerForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const submitBtn = document.getElementById("submitBtn");
-            const btnText = document.getElementById("btnText");
-            const loader = document.getElementById("loader");
-
-            submitBtn.disabled = true;
-            btnText.textContent = "Submitting...";
-            loader.classList.remove("hidden");
-
-            setTimeout(() => {
-                alert("Thank you for joining Team Vimalakar Foundation! A confirmation email has been sent to your registered email");
-                submitBtn.disabled = false;
-                btnText.textContent = "Submit";
-                loader.classList.add("hidden");
-                e.target.reset();
-            }, 2000);
+        document.getElementById('donationForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const amount = document.getElementById('amount').value;
+            if (amount < 100) {
+                Swal.fire('Error', 'Minimum donation amount is ₹100', 'error');
+                return;
+            }
+            const options = {
+                key: 'rzp_test_YourKeyHere',
+                amount: amount * 100,
+                currency: 'INR',
+                name: 'Team Vimalakar Foundation',
+                description: 'Donation',
+                prefill: { name, email },
+                theme: { color: '#FFC107' },
+                handler: function (response) {
+                    Swal.fire('Thank You!', 'Your donation has been received.', 'success');
+                }
+            };
+            const rzp = new Razorpay(options);
+            rzp.open();
         });
 
     </script>
