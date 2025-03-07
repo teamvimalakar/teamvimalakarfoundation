@@ -72,7 +72,8 @@
     </script>
 </head>
 
-<body class="bg-gray-100 text-black">
+<body class="bg-gray-100 text-black"
+    style="background-color: black; background-image: url(https://www.transparenttextures.com/patterns/stardust.png);">
 
     <!-- Header -->
     <div id="header-placeholder"></div>
@@ -88,6 +89,38 @@
                 Healthcare.</p>
             <a href="#donate" class="bg-tvf text-white py-3 px-6 rounded-full font-semibold text-lg hover:bg-tvf">Donate
                 Now</a>
+        </div>
+    </section>
+
+
+    <!-- Statistics Overview -->
+    <section class="container mx-auto p-6 bg-tvf rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-center mb-8" data-aos="fade-up">Overall Impact</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="bg-white p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-users text-dark text-4xl mb-3"></i>
+                <div class="stat-counter" id="totalParticipants">3310+</div>
+                <p class="text-gray-700">Total Participants</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-male text-dark text-4xl mb-3"></i>
+                <div class="stat-counter" id="menCount">1729+</div>
+                <p class="text-gray-700">Men Served</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-female text-dark text-4xl mb-3"></i>
+                <div class="stat-counter" id="womenCount">1580+</div>
+                <p class="text-gray-700">Women Served</p>
+            </div>
+
+            <!-- <div class="bg-white p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fa-solid fa-handshake-angle text-dark text-4xl mb-3"></i>
+                <div class="stat-counter" id="womenCount">100+</div>
+                <p class="text-gray-700">Volunteers Engaged</p>
+            </div> -->
         </div>
     </section>
 
